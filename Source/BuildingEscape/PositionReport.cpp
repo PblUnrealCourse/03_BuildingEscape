@@ -20,10 +20,10 @@ void UPositionReport::BeginPlay()
 {
 	Super::BeginPlay();
 
-	FString ObjectName;
-	ObjectName = GetOwner()->GetName();
+	FString ObjectName = GetOwner()->GetName();
+	FVector ObjectPos = GetOwner()->GetTransform().GetLocation();
 
-	UE_LOG(LogTemp, Warning, TEXT("Position report reporting for duty on %s!"), *ObjectName);
+	UE_LOG(LogTemp, Warning, TEXT("%s is at X:%f Y:%f Z:%f"), *ObjectName, ObjectPos.X, ObjectPos.Y, ObjectPos.Z);
 
 }
 
