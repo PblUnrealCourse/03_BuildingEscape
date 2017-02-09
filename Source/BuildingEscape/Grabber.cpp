@@ -64,6 +64,7 @@ void UGrabber::Grab()
 	if (ActorHit)
 	{
 		// Attach physics handle
+		// TODO Lock rotation of the grabbed object
 		PhysicsHandle->GrabComponentAtLocation(
 			ComponentToGrab,
 			NAME_None, // no bones needed
